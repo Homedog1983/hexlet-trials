@@ -1,16 +1,24 @@
 [tool.poetry]
 name = "hexlet-trials"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["Evgeny Sokolov <sokolovsolod@gmail.com>"]
 readme = "README.md"
 packages = [
-{include = "lesson-codes"},
+{include = "lessons_codes"},
 ]
+
+
+[tool.poetry.scripts]
+ch2_4_test = "lessons_codes.tests.ch2_4_autotests_tests:main"
+
 
 [tool.poetry.dependencies]
 python = "^3.10"
 
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
 
 [build-system]
 requires = ["poetry-core"]

@@ -1,6 +1,7 @@
-from functools import reduce, wraps
+# from functools import reduce
+from functools import wraps
 from collections import OrderedDict
-from operator import add, mul
+# from operator import add, mul
 
 
 # Memoized decorator
@@ -47,13 +48,11 @@ def memoizing(call_number):
     return wrapped
 
 
-
-
 # Composition of functions:
-def compose(f, g):
-    def inner(arg):
-        return f(g(arg))
-    return inner
+# def compose(f, g):
+#     def inner(arg):
+#         return f(g(arg))
+#     return inner
 
 
 # Линтер закономерно ругается на такие функции, потому что
