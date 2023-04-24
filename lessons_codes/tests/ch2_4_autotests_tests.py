@@ -11,8 +11,18 @@ def capitalize_test():
     print('Все тесты пройдены!')
 
 
+def capitalize_asert():
+    assert ch2_4.capitalize('hello') == 'Hello'
+    assert ch2_4.capitalize('') == ''
+    assert ch2_4.capitalize('34fgh') == '34fgh'
+    assert ch2_4.capitalize('$%^jkl') == '$%^jkl'
+    assert ch2_4.capitalize(' ghj') == ' ghj'
+    print('Все тесты пройдены!')
+
+
 def main():
     capitalize_test()
+    capitalize_asert()
 
 
 if __name__ == '__main__':
