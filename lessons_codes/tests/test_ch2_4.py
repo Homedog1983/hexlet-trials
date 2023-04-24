@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
+
 import lessons_codes.ch2_4_autotests as ch2_4
+# from lessons_codes.ch2_4_autotests import reverse
 
 
 def capitalize_test():
@@ -23,6 +25,15 @@ def capitalize_asert():
 def main():
     capitalize_test()
     capitalize_asert()
+
+
+# CODE FOR PYTEST
+def test_reverse():
+    assert ch2_4.reverse('Hexlet') == 'telxeH'
+
+
+def test_reverse_for_empty_string():
+    assert ch2_4.reverse('') == ''
 
 
 if __name__ == '__main__':

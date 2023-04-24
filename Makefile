@@ -10,6 +10,9 @@ package-reinstall:
 	python3 -m pip install --force-reinstall --user dist/*whl
 lint:
 	poetry run flake8 lessons_codes
+run pytest:
+	poetry run pytest
+#run pytest s:
+#	poetry run pytest -s
 run_2_4:
-	poetry run python -m lessons_codes.tests.ch2_4_autotests_tests
-	
+	poetry run python -m lessons_codes.tests.test_ch2_4
