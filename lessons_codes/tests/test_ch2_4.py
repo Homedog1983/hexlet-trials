@@ -2,7 +2,7 @@
 
 
 import lessons_codes.ch2_4_autotests as ch2_4
-# from lessons_codes.ch2_4_autotests import reverse
+from pytest import raises
 
 
 def capitalize_test():
@@ -22,18 +22,45 @@ def capitalize_asert():
     print('Все тесты пройдены!')
 
 
-def main():
-    capitalize_test()
-    capitalize_asert()
-
-
-# CODE FOR PYTEST
+################# PYTEST TESTS ################# 
 def test_reverse():
     assert ch2_4.reverse('Hexlet') == 'telxeH'
 
 
 def test_reverse_for_empty_string():
     assert ch2_4.reverse('') == ''
+
+
+# Stack testing
+def test_stack():
+    stack = []
+    stack.append('one')
+    stack.append('two')
+
+    assert stack.pop() == 'two'
+    assert stack.pop() == 'one'
+
+
+def test_stack_emptiness():
+    stack = []
+    assert not stack
+    stack.append('one')
+    assert bool(stack)  # not not stack
+
+    stack.pop()
+    assert not stack
+
+
+def test_pop_with_empty_stack():
+    stack = []
+    with raises(IndexError):
+        stack.pop()
+
+
+def main():
+    return True
+    # capitalize_test()
+    # capitalize_asert()
 
 
 if __name__ == '__main__':
